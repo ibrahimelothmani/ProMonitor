@@ -65,5 +65,9 @@ Vagrant.configure("2") do |config|
     tar xvfz node_exporter-1.8.1.linux-amd64.tar.gz
     # cd node_exporter-1.8.1.linux-amd64
     # ./node_exporter &
+    apt install nginx -y
+    apt-get update -y
+    systemctl enable nginx
+    systemctl start nginx
   SHELL
 end
